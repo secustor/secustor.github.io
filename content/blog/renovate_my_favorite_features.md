@@ -1,5 +1,5 @@
 ---
-title: "Renovate: Use any API as source"
+title: "Renovate: My favorite features"
 date: 2023-07-11T14:05:24+02:00
 type: post
 showToc: true

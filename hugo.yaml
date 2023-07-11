@@ -1,0 +1,66 @@
+baseURL: https://secustor.github.io/
+title: secustor
+theme: PaperMod
+
+defaultContentLanguage: "en"
+languageCode: en
+
+enableEmoji: true
+enableRobotsTXT: true
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 20
+    - identifier: talks
+      name: Talks
+      url: /talks/
+      weight: 40
+    - identifier: about
+      url: /about/
+      name: About Me
+      weight: 60
+    - identifier: hire-me
+      url: /hire/
+      name: Hire Me
+      weight: 80
+markup:
+  showTableOfContents:
+    startLevel: 1
+    endLevel: 3
+# https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/#configuration
+params:
+  # https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
+  profileMode:
+    enabled: true
+    title: "Sebastian Poxhofer" # optional default will be site title
+    subtitle: '"never bet against open source" - Anonymous'
+    imageUrl: "images/avatar.webp"
+    imageTitle: "profile picture"
+#    imageWidth: 240 # custom size
+#    imageHeight: 120 # custom size
+    buttons:
+  keywords:
+    - blog
+    - talks
+    - devops
+  author: "Sebastian Poxhofer"
+  description: '"never bet against open source" - Anonymous'
+  ShowTableOfContents: true
+  footer: Sebastian Poxhofer
+  socialIcons:
+    - name: github
+      url: https://github.com/secustor
+    - name: linkedin
+      url: https://www.linkedin.com/in/sebastian-poxhofer/
+    - name: email
+      url: mailto:sebastian@poxhofer.at
+  metaKeywords:
+    - blog
+    - secustor
+    - "Sebastian Poxhofer"

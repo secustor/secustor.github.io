@@ -49,6 +49,7 @@ params:
     - blog
     - talks
     - devops
+  ShowCodeCopyButtons: true
   author: "Sebastian Poxhofer"
   description: '"never bet against open source" - Anonymous'
   ShowTableOfContents: true

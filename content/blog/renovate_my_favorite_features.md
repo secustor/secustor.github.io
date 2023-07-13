@@ -14,7 +14,7 @@ In this blog,
 we will go through the config
 used in the Meetup talk ["Renovate: Let's
 upgrade your dependency workflow"](../../talks/renovate_lets_upgrade_your_dependency_workflow)
-and I will explain how to implement my favorite features [Renovate](https://github.com/renovatebot/renovate/).
+and I will explain how to implement my favorite features of [Renovate](https://github.com/renovatebot/renovate/).
 If you do not know what Renovate is, I highly recommend going through the slides. 
 
 ### The basis

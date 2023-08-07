@@ -50,10 +50,13 @@ params:
     - blog
     - talks
     - devops
+    - renovate
+    - RenovateBot
+    - OpenTelemetry
+    - "Sebastian Poxhofer"
   ShowCodeCopyButtons: true
   author: "Sebastian Poxhofer"
-  description: '"never bet against open source" - Anonymous'
-  ShowTableOfContents: true
+  description: 'The personal blog of me, where I blog mostly about Renovate, OpenTelemetry and the all the news of in OpenSource'
   footer: Sebastian Poxhofer
   socialIcons:
     - name: github
@@ -62,7 +65,3 @@ params:
       url: https://www.linkedin.com/in/sebastian-poxhofer/
     - name: email
       url: mailto:sebastian@poxhofer.at
-  metaKeywords:
-    - blog
-    - secustor
-    - "Sebastian Poxhofer"

@@ -126,7 +126,7 @@ The name has to be a unique string, to reference the datasource prefix it simply
       "defaultRegistryUrlTemplate": "https://api.releases.hashicorp.com/v1/releases/{{packageName}}",
       "format": "json",
       "transformTemplates": [
-        "{ \"releases\": $map($, function($v) { { \"version\": $v.version, \"releaseTimestamp\": $v.timestamp_created, \"changelogUrl\": $v.url_changelog, \"sourceUrl\": $v.url_source_repository } }), \"homepage\": $[0].url_project_website, \"sourceUrl\": $[0].url_source_repository }"
+        "{ \"releases\": $[license_class=\"oss\"].{\"version\": version,\"releaseTimestamp\": timestamp_created,\"changelogUrl\": url_changelog,\"sourceUrl\": url_source_repository},\"homepage\": $[license_class=\"oss\"][0].url_project_website}"
       ]
     }
   }

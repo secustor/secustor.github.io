@@ -1,7 +1,6 @@
 ---
 title: "Renovate: No Datasource? No problem!"
 date: 2023-08-07T00:05:24+02:00
-draft: false
 type: post
 showToc: true
 tags:

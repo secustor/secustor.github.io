@@ -8,6 +8,7 @@
   },
   "regexManagers": [
     {
+      "customType": "regex",
       "fileMatch": [
         "^.github/(?:workflows|actions)/.+\\.ya?ml$"
       ],

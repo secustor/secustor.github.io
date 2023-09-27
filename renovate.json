@@ -6,7 +6,7 @@
   "git-submodules": {
     "enabled": true
   },
-  "regexManagers": [
+  "customManagers": [
     {
       "customType": "regex",
       "fileMatch": [

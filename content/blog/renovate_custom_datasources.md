@@ -51,7 +51,7 @@ Updating a dependency follows these steps:
 The results of each stage can be overwritten using [`packageRules`](https://docs.renovatebot.com/configuration-options/#packagerules).
 
 ## The example
-To walk you through the setup, we use a Dockerfile as an example.
+To walk you through the setup, we will use a Dockerfile as an example.
 In this case, the Consul CLI is installed from the download repositories of Hashicorp. 
 
 ```dockerfile
@@ -68,14 +68,15 @@ Usually if you use RenovateBot you use one the provided managers such as `maven`
 These will extract dependencies and define the required fields such as `packageName`. 
 See [the basics](#the-basics) for more examples what kind of fields are returned from the `manager`.
 
-If you plan to use a `customDatasource` you will most of the time make use of the `regex` manager. 
+If you plan to use a `customDatasource` you will most of the time make use of the `custom` manager. 
 This special manager hands off most of the logic to user-defined regexes, this allows extracting any kind dependency as long as it is defined in a text file.
 
-In our case we create this `regex` manager:
+In our case we create this custom `regex` manager:
 ```json
 {
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": ["Dockerfile$"],
       "datasourceTemplate": "custom.hashicorp",
       "matchStrings": [
@@ -85,7 +86,8 @@ In our case we create this `regex` manager:
   ]
 }
 ```
-Let's go through the different options set here, for all available options see the [`regexManager` docs](https://docs.renovatebot.com/modules/manager/regex/).
+Let's go through the different options set here,
+for all available options see the [`customManager` docs](https://docs.renovatebot.com/modules/manager/regex/).
 
 `fileMatch` is set to match every file that ends in `Dockerfile`.
 
@@ -99,7 +101,7 @@ The regex in this example looks for a comment which is lead by
 Optionally a `datasource` and a `versioning` can be provided too.
 If no versioning has been defined `semver-coerced` will be used.
 The line after comment has to contain `_VERSION=` followed by the current version. 
-If you have additional formats you can add additional `matchStrings` or separate `regexManagers`. 
+If you have additional formats you can add additional `matchStrings` or separate `customManagers`. 
 
 For testing these regexes, I highly recommend using an online regex tester such as https://regex101.com.
 Do **NOT** forget to escape your backslashes!  
@@ -264,7 +266,7 @@ Which results in this JSON:
 ### Create for each object a new release
 Now to the more interesting part, mapping elements of the API result to a new array under `releases`.
 If we had to simply copy all objects, it would be easy.
-Simply copy it using `$` and we are done, tough we need to translate the field names too. 
+Simply copying it using `$` and we are done, tough we need to translate the field names too. 
 
 Therefore,
 we have to use the [JSONata object constructor](https://docs.jsonata.org/construction#object-constructors),
@@ -364,8 +366,9 @@ and you are done.
 
 ```json
 {
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": ["\\.ya?ml$"],
       "datasourceTemplate": "custom.hashicorp",
       "matchStrings": [
@@ -390,6 +393,6 @@ We have gone through all necessary steps to extract and update fully custom depe
 From non-standard format in files to a non-standard registry.
 This enables you to pretty much extract any dependency and update it. 
 
-Maybe helpful to note here is that we have not looked at the full capabilties of either the `regex` manager nor the `custom` datasource.
+Maybe helpful to note here is that we have not looked at the full capabilities of either the `regex` manager nor the `custom` datasource.
 Both have more helpful functionality like other [`matchStringStrategies`](https://docs.renovatebot.com/configuration-options/#matchstringsstrategy), 
 [`hostRules`](https://docs.renovatebot.com/configuration-options/#hostrules) or API [`format`s](https://docs.renovatebot.com/modules/datasource/custom/#formats).

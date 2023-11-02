@@ -22,7 +22,7 @@
   "packageRules": [
     {
       "description": "Automerge changes as long they are not broken",
-      "matchManagers": ["custom.regex", "git-submodules"],
+      "matchManagers": ["regex", "git-submodules"],
       "matchUpdateTypes": ["digest", "patch", "minor"],
 
       "automerge": true,

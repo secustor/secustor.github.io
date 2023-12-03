@@ -18,13 +18,18 @@
       "extractVersionTemplate": "{{#if (equals extractVersion 'true')}}^v(?<version>\\S+){{/if}}"
     }
   ],
-
   "packageRules": [
     {
       "description": "Automerge changes as long they are not broken",
-      "matchManagers": ["regex", "git-submodules"],
-      "matchUpdateTypes": ["digest", "patch", "minor"],
-
+      "matchManagers": [
+        "custom.regex",
+        "git-submodules"
+      ],
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor"
+      ],
       "automerge": true,
       "automergeType": "branch"
     }

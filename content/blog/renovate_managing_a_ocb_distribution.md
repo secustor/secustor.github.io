@@ -77,7 +77,7 @@ to look files named `builder-config.yml` or `builder-config.yaml` in any locatio
 
 When Renovate runs against your repository, you will get a number of PRs which will update the different components.
 
-## Group it
+## There are too many!
 Now you may want to group all PRs if they are coming from one of the upstream repositories.
 You can achieve this with [`packageRules`](https://docs.renovatebot.com/configuration-options/#packagerules) and 
 the [`groupName`](https://docs.renovatebot.com/configuration-options/#groupname) attribute.

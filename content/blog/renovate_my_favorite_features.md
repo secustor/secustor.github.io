@@ -15,9 +15,10 @@ we will go through the config
 used in the Meetup talk ["Renovate: Let's
 upgrade your dependency workflow"](../../talks/renovate_lets_upgrade_your_dependency_workflow)
 and I will explain how to implement my favorite features of [Renovate](https://github.com/renovatebot/renovate/).
-If you do not know what Renovate is, I highly recommend going through the slides. 
+If you do not know what Renovate is, I highly recommend going through the slides.
 
 ### The basis
+
 First we add a JSON schema reference with the `$schema` key,
 which allows editors to fetch the current schema of Renovate config.
 This enables intellisense and validation in IDEs.
@@ -29,7 +30,8 @@ to point to configuration files in other repositories](https://docs.renovatebot.
 This can be used to centrally manage your configuration for a whole organization
 or define a common config for a type of repository.
 
-`github>foo/bar:myConfig` will for example load a `json` named `myConfig.json` located in the root of https://github.com/foo/bar
+`github>foo/bar:myConfig` will for example load a `json` named `myConfig.json` located in the root of <https://github.com/foo/bar>
+
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
@@ -41,12 +43,14 @@ or define a common config for a type of repository.
 ```
 
 ### Vulnerabilities
+
 [`osvVulnerabilityAlerts`](https://docs.renovatebot.com/configuration-options/#osvvulnerabilityalerts)
-enables Renovate to lookup dependencies on https://osv.dev to find potential security risks.
+enables Renovate to lookup dependencies on <https://osv.dev> to find potential security risks.
 
 [`dependencyDashboardOSVVulnerabilitySummary`](https://docs.renovatebot.com/configuration-options/#dependencydashboardosvvulnerabilitysummary)
 controls if and what vulnerabilities should be displayed on the "Dependency Dashboard".
 Here we use `all` to display even vulnerabilities for which Renovate already has opened PRs to fix them up.
+
 ```json
 {
   "osvVulnerabilityAlerts": true,
@@ -55,6 +59,7 @@ Here we use `all` to display even vulnerabilities for which Renovate already has
 ```
 
 ### Labels and Templates
+
 Labels are useful to find quick PRs opened by Renovate.
 To enable this Renovate provides to config options
 which can be set globally or in the scope of a [packageRule](https://docs.renovatebot.com/configuration-options/#packagerules).
@@ -72,6 +77,7 @@ These allow defining dynamic values.
 In this case, we could define a [packageRule](https://docs.renovatebot.com/configuration-options/#packagerules) for each
 [manager](https://docs.renovatebot.com/modules/manager/),
 but this way a label is with the manager name is added to every PR created in this repository.
+
 ```json
 {
   "addLabels": ["renovate","{{{manager}}}"]
@@ -79,6 +85,7 @@ but this way a label is with the manager name is added to every PR created in th
 ```
 
 ### Package Rules and Replacements
+
 [packageRule](https://docs.renovatebot.com/configuration-options/#packagerules) can be used
 to conditionally apply configuration.
 This is done by defining a set of match and exclude functions,
@@ -93,6 +100,7 @@ In this case we match every Docker reference ( `matchDatasources` )
 with the reference to the Renovate Docker image on DockerHub
 ( `matchPackageNames` ) and then apply the new Docker reference.
 This leads to a new replacement PR such as [this one](https://github.com/secustor/renovate-meetup/pull/10).
+
 ```json
 {
   "packageRules": [
@@ -107,6 +115,7 @@ This leads to a new replacement PR such as [this one](https://github.com/secusto
 ```
 
 ### Regex Manager
+
 [RegexManagers](https://docs.renovatebot.com/configuration-options/#regexmanagers) allows updating versions
 are not natively supported by Renovate.
 This could be for example variables which reference dependencies,
@@ -120,14 +129,16 @@ Finally, we define the datasource `docker` ( which uses DockerHub by default) to
 The second manager is a more complex example,
 it makes use of a common pattern in which a comment is added before a dependency you want to update.
 Consider the following Dockerfile:
+
 ```Dockerfile
 # renovate: datasource=github-releases depName=aquasecurity/trivy extractVersion=true
 ARG TRIVY_VERSION=0.40.0
 RUN wget -c https://github.com/aquasecurity/trivy/releases/download/v${TRIVY_VERSION}/trivy_${TRIVY_VERSION}_Linux-64Bit.tar.gz -O - | \
         tar -xzC /usr/local/bin trivy
 ```
-This will match the string    
-`# renovate: datasource=github-releases depName=aquasecurity/trivy extractVersion=true \nARG TRIVY_VERSION=0.40.0`    
+
+This will match the string
+`# renovate: datasource=github-releases depName=aquasecurity/trivy extractVersion=true \nARG TRIVY_VERSION=0.40.0`
 and extract `github-releases` as datasource, `aquasecurity/trivy`
 as dependency name, `0.40.0`
 as value.
@@ -135,6 +146,7 @@ If the user defines a different versioning system than the default one
 ( `semver` )
 or an `extractVersion` block with `true` will activate in the pattern the removal of leading `v`s in versions of GitHub releases.
 The result is visible on [this PR](https://github.com/secustor/renovate-meetup/pull/14).
+
 ```json
 {
   "regexManagers": [
@@ -156,7 +168,9 @@ The result is visible on [this PR](https://github.com/secustor/renovate-meetup/p
 ```
 
 ### The complete config
+
 Now we can combine all parts and get following `renovate.json`
+
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
@@ -192,4 +206,4 @@ Now we can combine all parts and get following `renovate.json`
 }
 ```
 
-Repository: https://github.com/secustor/renovate-meetup
+Repository: <https://github.com/secustor/renovate-meetup>

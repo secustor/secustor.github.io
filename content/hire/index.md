@@ -2,6 +2,7 @@
 title: "Hire Me"
 date: 2023-07-05T14:16:04+02:00
 hidemeta: true
+comments: false
 ---
 
 If you need help to manage your zoo of dependencies and microservices in regard to processes, management and

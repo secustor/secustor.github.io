@@ -2,6 +2,7 @@
 title: "About Me"
 date: 2023-07-05T14:16:04+02:00
 hidemeta: true
+comments: false
 ---
 Hey, I'm Sebastian!
 

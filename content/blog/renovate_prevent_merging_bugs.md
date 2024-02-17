@@ -23,12 +23,12 @@ which apply to most projects and more [Renovate specific one](#what-does-renovat
 I recommend skimming at least both, but if you are not yet using Renovate or you are looking simply for some guidance,
 then each chapter can be read independently.
 
-# General recommendations
+## General recommendations
 
 Tough, this blog entry is mostly about ways to prevent merging buggy dependencies using [Renovate](https://github.com/renovatebot/renovate/).
 I want to start with general good practices around managing and finding dependencies before they are merged.
 
-## Run tests on each PR
+### Run tests on each PR
 
 This seems obvious at first glance, but it isn't...
 Sadly, having some of your own code is not enough.
@@ -45,7 +45,7 @@ An example for such dependencies is Docker images that are used as base images.
 
 Unit tests will not cover all the problems which can appear.
 
-## Install dependencies based on lock file
+### Install dependencies based on lock file
 
 Most modern package managers come with lock file support such as NPM for Node.js (`package-lock.json`) and PDM
 ( `pdm.lock` ) this brings the benefit of reproducible builds and other benefits
@@ -73,14 +73,14 @@ If your manager makes use of this method,
 you should confirm this by scanning your build logs
 or comparing hash values of your build artifacts while triggering the CI specific build manually.
 
-## Test integrations with libraries
+### Test integrations with libraries
 
 For typesafe languages such as Java, C# or Go it most often enough to simply build your program,
 tough this is not the case for dynamically typed systems.
 In other cases, like Python,
 you have to test the API of external packages to get the same level of confidence for merges.
 
-# What does Renovate bring to the table?
+## What does Renovate bring to the table?
 
 If you do not know what Renovate is, I recommend reading this blog first:
 <https://www.augmentedmind.de/2023/07/30/renovate-bot-introduction/>
@@ -88,7 +88,7 @@ If you do not know what Renovate is, I recommend reading this blog first:
 Renovate has some features which give you additional confidence to merge external chances.
 Tough they cannot be a replacement for some fundamental testing as described above.
 
-## Minimum release age
+### Minimum release age
 
 [`minimumReleaseAge`](https://docs.renovatebot.com/configuration-options/#minimumreleaseage) allows you to postpone updates a number of days.
 
@@ -109,7 +109,7 @@ For context, NPM releases can be unlisted if they are not older than 3 days
 }
 ```
 
-## Merge confidence
+### Merge confidence
 
 `mergeConfidence` is a by Renovate calculated value which describes how confident you can be to merge this dependency upgrade.
 This value is calculated based on different factors which are captured by the hosted Renovate App:
@@ -138,7 +138,7 @@ Available values are:
 }
 ```
 
-# Summary
+## Summary
 
 I hope this helped you on your way to more reliable dependency updates.
 

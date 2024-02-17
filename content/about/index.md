@@ -9,5 +9,6 @@ A software engineer and opensource enthusiast specializing in developing, monito
 
 Currently, I'm part of [N26](https://n26.com) and do freelance work on projects which I help to maintain.
 Some of the projects you maybe know are:
+
 - [Renovate](https://github.com/renovatebot/renovate)
 - [OpenTelemetry](https://github.com/open-telemetry)

@@ -21,7 +21,7 @@ This is achieved
 by leveraging only OpenSource components such as [OpenTelemetry](https://opentelemetry.io/) and [Unleash](https://www.getunleash.io/).
 The example consists of multiple microservices which are deployed in a Kubernetes cluster.
 
-{{< gslides src="<https://docs.google.com/presentation/d/1w1VhfGQPgCAPoT2VSB6KZlXZOXa_m5p8R-xzOzzL3hM/embed?start=false&loop=false&delayms=3000>" >}}
+{{< gslides src="https://docs.google.com/presentation/d/1w1VhfGQPgCAPoT2VSB6KZlXZOXa_m5p8R-xzOzzL3hM/embed?start=false&loop=false&delayms=3000" >}}
 
 Repository: <https://github.com/secustor/opentelemetry-meetup>
 

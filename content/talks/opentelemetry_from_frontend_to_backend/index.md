@@ -22,7 +22,7 @@ The traced components are:
 - Kafka
 - Asynchronous processing microservice
 
-{{< gslides src="<https://docs.google.com/presentation/d/1jPDH8Csv-Qle7Z-P7rFJgjOsBpgKeehPhjFPqTRET1Y/embed?start=false&loop=false&delayms=3000>" >}}
+{{< gslides src="https://docs.google.com/presentation/d/1jPDH8Csv-Qle7Z-P7rFJgjOsBpgKeehPhjFPqTRET1Y/embed?start=false&loop=false&delayms=3000" >}}
 
 Repository: <https://github.com/secustor/opentelemetry-meetup>
 

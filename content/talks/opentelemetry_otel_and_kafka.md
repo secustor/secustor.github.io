@@ -13,6 +13,6 @@ tags:
 This talk is an update of [OpenTelemetry: from Frontend to Backend](../opentelemetry_from_frontend_to_backend)
 presented at [Grafana and Friends: Munich](https://www.meetup.com/de-DE/grafana-and-friends-munich/)
 
-{{< gslides src="<https://docs.google.com/presentation/d/1ccUM-rJEBq2lxw2mnQvvjrgeOD2BxEdUxUtf0pjrb3k/embed?start=false&loop=false&delayms=3000>" >}}
+{{< gslides src="https://docs.google.com/presentation/d/1ccUM-rJEBq2lxw2mnQvvjrgeOD2BxEdUxUtf0pjrb3k/embed?start=false&loop=false&delayms=3000" >}}
 
-Repository: <https://github.com/secustor/opentelemetry-meetup>
+Repository: https://github.com/secustor/opentelemetry-meetup

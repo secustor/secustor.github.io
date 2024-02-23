@@ -144,7 +144,7 @@ FROM node:18-bookworm-slim@sha256:aaaaaaaaaaaaaaaaaaa AS packages
 If you want to prevent this specific behaviour you use this option: 
 ```json
 {
-  "ignorePresets": ["pinDockerfile"] TODO check if correct
+  "ignorePresets": ["docker:pinDigests"]
 }
 ```
 
@@ -162,8 +162,8 @@ COPY --from=myRegistry.com/anOrg/myImage:v1.0.0 /bin/myTool /bin/myTool
 ```
 
 ##### Direct download
-If no image is avaiable there it is also possible to download the binary directly during the build process. 
-For this the download url of the binary has to be identified
+If no image is available there, it is also possible to download the binary directly during the build process. 
+For this, the download url of the binary has to be identified, 
 and all references of the version have to centralize in a single environment variable.
 ```dockerfile
 # renovate depName=consul

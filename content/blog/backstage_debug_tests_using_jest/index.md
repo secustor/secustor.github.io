@@ -10,13 +10,13 @@ tags:
   - jest
 ---
 ## Jest
-This will be a short blog how to set up your Webstorm instance to debug Backstage and its Jest tests. 
+This will be a short blog how to set up your Webstorm instance to debug Backstage and its Jest tests.
 If you are getting `Jest encountered an unexpected token` on a Backstage repo while debugging with Webstorm.
 
 1. Run configurations
    ![run-configs](./images/run-configs.png)
 
-   
+
 2. "Edit configurations..."
    ![edit-configuration](./images/edit-config.png)
 

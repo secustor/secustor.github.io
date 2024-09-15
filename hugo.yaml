@@ -57,7 +57,8 @@ params:
   ShowCodeCopyButtons: true
   author: "Sebastian Poxhofer"
   description: 'The personal blog of Sebastian Poxhofer, where I blog about Renovate, OpenTelemetry and the all the news of in OpenSource'
-  footer: Sebastian Poxhofer
+  footer:
+    hideCopyright: false
   comments: true
   socialIcons:
     - name: github

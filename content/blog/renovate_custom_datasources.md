@@ -395,7 +395,7 @@ and you are done.
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["\\.ya?ml$"],
+      "fileMatch": ["Dockerfile$"],
       "datasourceTemplate": "custom.hashicorp",
       "matchStrings": [
         "#\\s*renovate:\\s*(datasource=(?<datasource>.*?) )?depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*\\w*:\\s*(?<currentValue>.*)\\s"

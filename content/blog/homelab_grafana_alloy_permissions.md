@@ -1,6 +1,6 @@
 ---
 title: "K8s monitoring v2: Why are there no logs?"
-date: 2025-03-19T00:05:24+02:00
+date: 2025-03-03T00:05:24+02:00
 type: post
 showToc: true
 tags:
@@ -9,6 +9,11 @@ tags:
   - alloy
   - grafana
 ---
+
+Do you have suddenly no logs in your Grafana Alloy logs after upgrading the ["K8s Monitoring helm chart v2"](https://github.com/grafana/k8s-monitoring-helm/tree/main/charts/k8s-monitoring)? 😅
+This post will help you to solve the issue.
+
+<!--more-->
 
 I have introduced Grafanas ["K8s Monitoring helm chart v2"](https://github.com/grafana/k8s-monitoring-helm/tree/main/charts/k8s-monitoring) recently into my homelab, but I had a bad awakening when trying to debug an issue with my ingress and the logs were not showing up in Grafana.
 In the end, it has been a [layer 8 issue](https://en.wikipedia.org/wiki/Layer_8), so behind the keyboard 😅, but I wanted to share the solution with you.

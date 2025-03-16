@@ -35,10 +35,7 @@ or define a common config for a type of repository.
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base",
-    "github>foo/bar:myConfig"
-  ]
+  "extends": ["config:base", "github>foo/bar:myConfig"]
 }
 ```
 
@@ -80,7 +77,7 @@ but this way a label is with the manager name is added to every PR created in th
 
 ```json
 {
-  "addLabels": ["renovate","{{{manager}}}"]
+  "addLabels": ["renovate", "{{{manager}}}"]
 }
 ```
 
@@ -174,12 +171,10 @@ Now we can combine all parts and get following `renovate.json`
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
+  "extends": ["config:base"],
   "osvVulnerabilityAlerts": true,
   "dependencyDashboardOSVVulnerabilitySummary": "all",
-  "addLabels": ["renovate","{{{manager}}}"],
+  "addLabels": ["renovate", "{{{manager}}}"],
   "packageRules": [
     {
       "description": "Replace Dockerhub with ghcr.io for renovate",

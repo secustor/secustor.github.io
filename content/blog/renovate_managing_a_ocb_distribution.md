@@ -71,9 +71,7 @@ Because of this fact we have to add an additional [`fileMatch`](https://docs.ren
 ```json title="renovate.json"
 {
   "ocb": {
-    "fileMatch": [
-      "builder-config\\.ya?ml$"
-    ]
+    "fileMatch": ["builder-config\\.ya?ml$"]
   }
 }
 ```
@@ -92,9 +90,7 @@ the [`groupName`](https://docs.renovatebot.com/configuration-options/#groupname)
 ```json title="renovate.json"
 {
   "ocb": {
-    "fileMatch": [
-      "builder-config\\.ya?ml$"
-    ]
+    "fileMatch": ["builder-config\\.ya?ml$"]
   },
   "packageRules": [
     {
@@ -121,9 +117,7 @@ which sets up Renovate to increase the `version` field with a semver level.
 {
   "bumpVersion": "minor",
   "ocb": {
-    "fileMatch": [
-      "builder-config\\.ya?ml$"
-    ]
+    "fileMatch": ["builder-config\\.ya?ml$"]
   }
 }
 ```

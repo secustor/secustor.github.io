@@ -250,7 +250,7 @@ and the (shortened) response we are getting from the Hashicorp API endpoint
 First, we are going to create the root structure of the result:
 
 ```jsonata
-{ 
+{
     "releases": [],
     "homepage": ""
 }
@@ -261,7 +261,7 @@ This will result in the same output as the JSONata rule as everything is static.
 The next step is to set the homepage by simply referencing the first element of the input JSON.
 
 ```jsonata
-{ 
+{
     "releases": [],
     "homepage": $[0].url_project_website
 }
@@ -291,12 +291,12 @@ we have to use the [JSONata object constructor](https://docs.jsonata.org/constru
 which allows use to loop over the input array and then to reference each field we want to copy to our result.
 
 ```jsonata
-{ 
+{
     "releases": $.{
         "version": version,
         "releaseTimestamp": timestamp_created,
-        "changelogUrl": url_changelog, 
-        "sourceUrl": url_source_repository 
+        "changelogUrl": url_changelog,
+        "sourceUrl": url_source_repository
     },
     "homepage": $[0].url_project_website
 }
@@ -344,12 +344,12 @@ This is what we are going to do in the next section.
 To skip these during creation, we add a [predicate](https://docs.jsonata.org/predicate#predicates).
 
 ```jsonata
-{ 
+{
     "releases": $[license_class="oss"].{
         "version": version,
         "releaseTimestamp": timestamp_created,
-        "changelogUrl": url_changelog, 
-        "sourceUrl": url_source_repository 
+        "changelogUrl": url_changelog,
+        "sourceUrl": url_source_repository
     },
     "homepage": $[license_class="oss"][0].url_project_website
 }

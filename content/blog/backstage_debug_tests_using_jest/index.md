@@ -9,6 +9,7 @@ tags:
   - webstorm
   - jest
 ---
+
 ## Jest
 
 This will be a short blog how to set up your Webstorm instance to debug Backstage and its Jest tests.
@@ -28,9 +29,9 @@ If you are getting `Jest encountered an unexpected token` on a Backstage repo wh
 
 5. Add the following test "Jest options"
 
-    ```text title="Jest options"
-    --config node_modules/@backstage/cli/config/jest.js
-    ```
+   ```text title="Jest options"
+   --config node_modules/@backstage/cli/config/jest.js
+   ```
 
    This will use the jest config, also used by `backstage-cli`.
    ![options](./images/options.png)

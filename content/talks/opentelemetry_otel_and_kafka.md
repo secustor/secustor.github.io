@@ -10,6 +10,7 @@ tags:
   - kafka
   - kubernetes
 ---
+
 This talk is an update of [OpenTelemetry: from Frontend to Backend](../opentelemetry_from_frontend_to_backend)
 presented at [Grafana and Friends: Munich](https://www.meetup.com/de-DE/grafana-and-friends-munich/)
 

@@ -43,8 +43,8 @@ params:
     subtitle: '"never bet against open source" - Anonymous'
     imageUrl: "images/avatar.webp"
     imageTitle: "profile picture"
-#    imageWidth: 240 # custom size
-#    imageHeight: 120 # custom size
+    #    imageWidth: 240 # custom size
+    #    imageHeight: 120 # custom size
     buttons:
   keywords:
     - blog
@@ -56,7 +56,7 @@ params:
     - "Sebastian Poxhofer"
   ShowCodeCopyButtons: true
   author: "Sebastian Poxhofer"
-  description: 'The personal blog of Sebastian Poxhofer, where I blog about Renovate, OpenTelemetry and the all the news of in OpenSource'
+  description: "The personal blog of Sebastian Poxhofer, where I blog about Renovate, OpenTelemetry and the all the news of in OpenSource"
   footer:
     hideCopyright: false
   comments: true

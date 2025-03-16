@@ -11,9 +11,9 @@ tags:
   - Backstage
 ---
 
-Ever struggled to set up Renovate with Backstage repositories?  
+Ever struggled to set up Renovate with Backstage repositories?
 
-You are not alone! 🤗  
+You are not alone! 🤗
 
 <!--more-->
 
@@ -44,9 +44,7 @@ Here is an example of how to use the `default` preset which will work for any Re
 
 ```json
 {
-  "extends": [
-    "github>secustor/backstage-renovate-config"
-  ]
+  "extends": ["github>secustor/backstage-renovate-config"]
 }
 ```
 
@@ -54,9 +52,7 @@ If you want to use specific features of the hosted Mend App or you are self-host
 
 ```json
 {
-  "extends": [
-    "github>secustor/backstage-renovate-config:self-hosted.json5"
-  ]
+  "extends": ["github>secustor/backstage-renovate-config:self-hosted.json5"]
 }
 ```
 

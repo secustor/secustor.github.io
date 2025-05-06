@@ -43,7 +43,7 @@ If you are familiar with how RenovateBot works, you can skip this section, tough
 Updating a dependency follows these steps:
 
 - Clone repository
-- Find files using the `fileMatch` parameter of `managers`
+- Find files using the `managerFilePatterns` parameter of `managers`
 - Extract dependencies based on the `manager` logic
 - The `manager` returns the detected dependencies, which contain the `currentVersion`, an optional `registryURL`, a `packageName` and/or `depName`, a datasource as well as a `versioning`
 - Fetch releases from `datasource` based on the `packageName`. If the `datasource` supports custom registries the `registryURL` will be used instead of a by the `datasource` predefined URL.
@@ -81,7 +81,7 @@ In our case we create this custom `regex` manager:
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["Dockerfile$"],
+      "managerFilePatterns": ["Dockerfile"],
       "datasourceTemplate": "custom.hashicorp",
       "matchStrings": [
         "#\\s*renovate:\\s*(datasource=(?<datasource>.*?) )?depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*.*?_VERSION=(?<currentValue>.*)"
@@ -94,7 +94,7 @@ In our case we create this custom `regex` manager:
 Let's go through the different options set here,
 for all available options see the [`customManager` docs](https://docs.renovatebot.com/modules/manager/regex/).
 
-`fileMatch` is set to match every file that ends in `Dockerfile`.
+`managerFilePatterns` ( which replaced `fileMatch` ) is set to match every file that ends in `Dockerfile`.
 
 `datasourceTemplate` template used for datasource.
 This will be used if no `datasource` match group could be extracted from `matchStrings`.
@@ -395,7 +395,7 @@ and you are done.
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["Dockerfile$"],
+      "managerFilePatterns": ["**/Dockerfile"],
       "datasourceTemplate": "custom.hashicorp",
       "matchStrings": [
         "#\\s*renovate:\\s*(datasource=(?<datasource>.*?) )?depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*\\w*:\\s*(?<currentValue>.*)\\s"

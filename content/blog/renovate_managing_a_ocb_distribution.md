@@ -66,12 +66,12 @@ Modules such as `exporters`,
 
 As there is no convention of how the builder configs are named,
 Renovate has not any file pattern added by default to look for.
-Because of this fact we have to add an additional [`fileMatch`](https://docs.renovatebot.com/configuration-options/#filematch) pattern for our `ocb` manager.
+Because of this fact we have to add an additional [`managerFilePatterns`](https://docs.renovatebot.com/configuration-options/#managerfilepatterns) pattern for our `ocb` manager.
 
 ```json title="renovate.json"
 {
   "ocb": {
-    "fileMatch": ["builder-config\\.ya?ml$"]
+    "managerFilePatterns": ["builder-config.{yaml,yml}"]
   }
 }
 ```
@@ -90,7 +90,7 @@ the [`groupName`](https://docs.renovatebot.com/configuration-options/#groupname)
 ```json title="renovate.json"
 {
   "ocb": {
-    "fileMatch": ["builder-config\\.ya?ml$"]
+    "managerFilePatterns": ["builder-config.{yaml,yml}"]
   },
   "packageRules": [
     {
@@ -117,7 +117,7 @@ which sets up Renovate to increase the `version` field with a semver level.
 {
   "bumpVersion": "minor",
   "ocb": {
-    "fileMatch": ["builder-config\\.ya?ml$"]
+    "managerFilePatterns": ["builder-config.{yaml,yml}"]
   }
 }
 ```

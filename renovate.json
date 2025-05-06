@@ -8,8 +8,7 @@
     {
       "description": "Automerge changes as long they are not broken",
       "matchUpdateTypes": ["digest", "patch", "minor"],
-      "automerge": true,
-      "automergeType": "branch"
+      "automerge": true
     }
   ]
 }

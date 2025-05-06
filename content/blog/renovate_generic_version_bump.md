@@ -1,6 +1,6 @@
 ---
 title: "Renovate: Could you please bump that version?"
-date: 2025-02-13T00:05:24+02:00
+date: 2025-05-6T00:05:24+02:00
 type: post
 showToc: true
 tags:

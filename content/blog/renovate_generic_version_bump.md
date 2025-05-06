@@ -1,5 +1,5 @@
 ---
-title: "Renovate: TBD"
+title: "Renovate: Could you please bump that version?"
 date: 2025-02-13T00:05:24+02:00
 type: post
 showToc: true
@@ -46,8 +46,8 @@ and the following Renovate configuration:
 {
   "versionBumps": [
     {
-      "fileMatch": [
-        "^version\\.txt$"
+      "filePatterns": [
+        "version.txt"
       ],
       "matchStrings": [
         "^(?<version>.*)$"
@@ -75,8 +75,8 @@ and the following Renovate configuration:
 {
   "versionBumps": [
     {
-      "fileMatch": [
-        "{{packageFileDir}}\/Chart\\.ya?ml"
+      "filePatterns": [
+        "{{packageFileDir}}/Chart.{yaml,yml}"
       ],
       "matchStrings": [
         "version:\\s(?<version>[^\\s]+)"

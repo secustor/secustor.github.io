@@ -1,33 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:best-practices"
-  ],
+  "extends": ["github>secustor/renovate-config"],
   "git-submodules": {
     "enabled": true
   },
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": [
-        "^.github/(?:workflows|actions)/.+\\.ya?ml$"
-      ],
-      "matchStrings": [
-        "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>[^\\s]+?)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[a-z-0-9]+?))?(?: extractVersion=(?<extractVersion>.*?))?\\s+[A-Za-z0-9_]+?_VERSION\\s*:\\s*[\"']?(?<currentValue>.+?)[\"']?\\s"
-      ],
-      "extractVersionTemplate": "{{#if (equals extractVersion 'true')}}^v(?<version>\\S+){{/if}}"
-    }
-  ],
   "packageRules": [
     {
       "description": "Automerge changes as long they are not broken",
-      "matchUpdateTypes": [
-        "digest",
-        "patch",
-        "minor"
-      ],
-      "automerge": true,
-      "automergeType": "branch"
+      "matchUpdateTypes": ["digest", "patch", "minor"],
+      "automerge": true
     }
   ]
 }

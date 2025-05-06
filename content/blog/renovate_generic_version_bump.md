@@ -20,15 +20,15 @@ Well, it can now!
 In this blog post, I will show you how to configure the newest addition to Renovate suite of features: **Generic Version Bump**.
 
 ## What is Generic Version Bump?
-A generic version bump is contrast to the existing `bumpVersion` feature, independent of the dependency manager.
+A generic version bump is contrast to the existing [`bumpVersion`](https://docs.renovatebot.com/configuration-options/#bumpversion) feature, independent of the dependency manager.
 It allows you to bump [semantic versions](https://semver.org/) in files based on a change in another file, even if they are not directly related.
 
 The feature is triggered if any package file or lock file changes, so it is possible to trigger version bumps on lock file changes.
 
 ## How to use it?
-The configuration is straightforward. You need to define a `versionBumps` array with the following properties:
+The configuration is straightforward. You need to define a [`versionBumps`](https://docs.renovatebot.com/configuration-options/#bumpversions) array with the following properties:
 
-- `fileMatch`: An array of regexes which are matched against the relative path from the repo root. If any match, the `matchStrings` are applied.
+- `filePatterns`: An array of [Renovate patterns](https://docs.renovatebot.com/string-pattern-matching/) which are matched against the relative path from the repo root. If any match, the `matchStrings` are applied.
 - `matchStrings`: An array of regexes which are matched against the file content. Each regex has to contain a `version` named regex group. If any version is matched, then a bump is attempted.
 - `bumpType`: The type of bump to perform. Can be `major`, `minor`, `patch` or `prerelease`.
 

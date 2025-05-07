@@ -111,7 +111,7 @@ This leads to a new replacement PR such as [this one](https://github.com/secusto
 }
 ```
 
-### Regex Manager
+### Custom Manager
 
 [RegexManagers](https://docs.renovatebot.com/configuration-options/#regexmanagers) allows updating versions
 are not natively supported by Renovate.
@@ -146,14 +146,16 @@ The result is visible on [this PR](https://github.com/secustor/renovate-meetup/p
 
 ```json
 {
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": ["^README.md$"],
+      "customType": "regex",
+      "managerFilePatterns": ["README.md"],
       "matchStrings": ["(?<depName>[\\w/\\.]+):(?<currentValue>[^\\s]+)"],
       "datasourceTemplate": "docker"
     },
     {
-      "fileMatch": ["(^|/)Dockerfile$"],
+      "customType": "regex",
+      "managerFilePatterns": ["**/Dockerfile"],
       "matchStrings": [
         "renovate: datasource=(?<datasource>.*?) depName=(?<depName>\\S*)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\nARG .*?_VERSION=(?<currentValue>.*)\\s"
       ],
@@ -171,7 +173,7 @@ Now we can combine all parts and get following `renovate.json`
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:recommended"],
   "osvVulnerabilityAlerts": true,
   "dependencyDashboardOSVVulnerabilitySummary": "all",
   "addLabels": ["renovate", "{{{manager}}}"],
@@ -183,14 +185,16 @@ Now we can combine all parts and get following `renovate.json`
       "replacementName": "ghcr.io/renovatebot/renovate"
     }
   ],
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": ["^README.md$"],
+      "customType": "regex",
+      "fileMatch": ["README.md"],
       "matchStrings": ["(?<depName>[\\w/\\.]+):(?<currentValue>[^\\s]+)"],
       "datasourceTemplate": "docker"
     },
     {
-      "fileMatch": ["(^|/)Dockerfile$"],
+      "customType": "regex",
+      "fileMatch": ["**/Dockerfile"],
       "matchStrings": [
         "renovate: datasource=(?<datasource>.*?) depName=(?<depName>\\S*)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\nARG .*?_VERSION=(?<currentValue>.*)\\s"
       ],

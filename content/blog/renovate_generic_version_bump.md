@@ -21,7 +21,7 @@ In this blog post, I will show you how to configure the newest addition to Renov
 
 ## What is Generic Version Bump?
 
-A generic version bump is contrast to the existing [`bumpVersion`](https://docs.renovatebot.com/configuration-options/#bumpversion) feature, independent of the dependency manager.
+A generic version bump is in contrast to the existing [`bumpVersion`](https://docs.renovatebot.com/configuration-options/#bumpversion) feature, independent of the dependency manager.
 It allows you to bump [semantic versions](https://semver.org/) in files based on a change in another file, even if they are not directly related.
 
 The feature is triggered if any package file or lock file changes, so it is possible to trigger version bumps on lock file changes.

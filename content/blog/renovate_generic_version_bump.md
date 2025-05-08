@@ -48,7 +48,7 @@ and the following Renovate configuration:
 
 ```json title="A very simple bumpVersion example"
 {
-  "versionBumps": [
+  "bumpVersions": [
     {
       "filePatterns": ["version.txt"],
       "matchStrings": ["^(?<version>.*)$"],
@@ -76,7 +76,7 @@ and the following Renovate configuration:
 
 ```json title="An advanced Helm example"
 {
-  "versionBumps": [
+  "bumpVersions": [
     {
       "filePatterns": ["{{packageFileDir}}/Chart.{yaml,yml}"],
       "matchStrings": ["version:\\s(?<version>[^\\s]+)"],

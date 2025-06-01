@@ -90,6 +90,46 @@ This configuration will only consider `Chart.yaml` files in the same directory a
 The `version` in `Chart.yaml` is bumped to `0.2.0` if the patch level only of `appVersion` changes
 ( e.g. from `1.0.0` to `1.0.1`), otherwise, it will bump the minor level (e.g. from `1.0.0` to `1.1.0`).
 
+The problem though with this configuration will only bump the version for dependencies withing the same `packageFileDir`.
+This will happen if you group multiple upgrades together in a single PR, for example if you want to bump all chart at the same time.
+
+Some background: Renovate will merge the template variables ( including `packageFileDir`) of all upgrades in the PR into a single context.
+To solve this, we can use the `upgrades` context variable, which contains all upgrades in the PR.
+
+With some templating magic, we can create a regex that matches all `Chart.yaml` files in the same directory as the updated files, while looking up the `packageFileDir` from the `upgrades` context.
+Kudos to [KeepItSimpleStupid](https://github.com/KeepItSimpleStupid) which provided the regex magic in the [Feedback discussion](https://github.com/renovatebot/renovate/discussions/35770#discussioncomment-13210022).
+
+```json title="An advanced Helm example with upgrades context"
+{
+  "bumpVersions": [
+    {
+      "filePatterns": [
+        "/^({{#each (distinct (lookupArray upgrades \"packageFileDir\"))}}{{{.}}}{{#unless @last}}|{{/unless}}{{/each}})/Chart\\.(yaml|yml)$/"
+      ],
+      "matchStrings": ["version:\\s(?<version>[^\\s]+)"],
+      "bumpType": "{{#if isPatch}}patch{{else}}minor{{/if}}"
+    }
+  ]
+}
+```
+
+Let's break down the changes to the `filePatterns`:
+
+```text
+/^({{#each (distinct (lookupArray upgrades "packageFileDir"))}}{{{.}}}{{#unless @last}}|{{/unless}}{{/each}})/Chart\\.(yaml|yml)$/
+```
+
+This regex does the following:
+
+- `/.../` Adding slashes to use regex matching
+- `^` asserts the start of the string.
+- `({{#each (distinct (lookupArray upgrades \"packageFileDir\"))}}{{{.}}}{{#unless @last}}|{{/unless}}{{/each}})` let's go through this as it is processed by Renovate:
+  - `lookupArray upgrades \"packageFileDir\"` looks up the `packageFileDir` from the `upgrades` context, which contains all upgrades in the PR and returns an array of all `packageFileDir` values.
+  - `distinct` removes duplicates from the array, so we only have unique directories.
+  - `{{#each ...}}{{{ . }}}{{/each}}` iterates over the array and template each element.
+  - `{{#unless @last}}|{{/unless}}` adds a pipe `|` between each element, except for the last one.
+- `/Chart\\.(yaml|yml)$/` matches the `Chart.yaml` or `Chart.yml` file in the directory. Adding `$` asserts that we are not looking at a a subdirectory with the same name.
+
 ## Conclusion
 
 The generic version bump feature is a powerful addition to Renovate, allowing you to bump versions based on file contents.

@@ -79,8 +79,10 @@ I help organizations transform ad‑hoc infrastructure into a **productized inte
 ### Getting Started
 Send a short note describing your current pain points or desired outcomes. I can quickly shape an engagement scope and a first actionable milestone.
 
-**Email:** [sebastian@poxhofer.at](mailto:sebastian@poxhofer.at)  
-**LinkedIn:** [https://www.linkedin.com/in/sebastian-poxhofer/](https://www.linkedin.com/in/sebastian-poxhofer/)
+<div class="buttons" style="margin-top:8px; margin-bottom:24px;">
+  <a class="button" href="mailto:sebastian@poxhofer.at?subject=Platform%20Engineering%20Inquiry"><span class="button-inner">Book Intro (Email)</span></a>
+  <a class="button" href="https://www.linkedin.com/in/sebastian-poxhofer/" target="_blank" rel="noopener"><span class="button-inner">Connect on LinkedIn</span></a>
+</div>
 
 Let’s build a platform your engineers love—and your auditors trust.
 

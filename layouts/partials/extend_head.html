@@ -16,11 +16,12 @@
         "name": "N26"
       },
       "sameAs": [
-        {{/* Build list from socialIcons only (GitHub already present there) */}}
         {{- $first := true -}}
         {{- range .Site.Params.socialIcons }}
-          {{- if not $first }},{{ end }}"{{ .url }}"
-          {{- $first = false -}}
+          {{- if not (hasPrefix .url "mailto:") }}
+            {{- if not $first }},{{ end }}"{{ .url }}"
+            {{- $first = false -}}
+          {{- end -}}
         {{- end }}
       ],
       "knowsAbout": [
@@ -33,11 +34,6 @@
         "Renovate",
         "Supply Chain Security",
         "Site Reliability Engineering",
-        "GitLab",
-        "GitHub",
-        "Argo CD",
-        "GitHub Actions",
-        "SRE",
         "Developer Experience"
       ],
       "knowsLanguage": [
@@ -70,12 +66,19 @@
         "SLO & Reliability Engineering",
         "Developer Experience Optimization"
       ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AT",
+        "addressLocality": "Vienna",
+        "addressRegion": "Vienna"
+      },
+      "priceRange": "€90-€150/h",
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "EUR",
         "lowPrice": "90",
         "highPrice": "150",
-        "offerCount": "2",
+        "offerCount": "3",
         "priceSpecification": [
           {
             "@type": "UnitPriceSpecification",
@@ -100,6 +103,13 @@
           }
         ]
       },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "sebastian@poxhofer.at",
+        "availableLanguage": ["de", "en"],
+        "areaServed": "Global"
+      }],
       "description": "Platform Engineering & Kubernetes consulting: multi-cluster & hybrid architectures, Backstage IDP, GitOps, dependency automation (Renovate), OpenTelemetry observability, SLO frameworks, and regulated environment enablement.",
       "termsOfService": "{{ .Site.BaseURL }}hire/",
       "additionalType": "https://schema.org/Consulting"

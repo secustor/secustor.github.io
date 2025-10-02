@@ -2,11 +2,16 @@
 title: "Hire Me"
 hidemeta: true
 comments: false
-# You can optionally add a description for SEO; uncomment if desired
 description: "Platform Engineering & Kubernetes Consulting – Tech Lead DevEx (N26). Hybrid cloud & on‑prem enablement, IDP, GitOps, supply chain security, observability, SLOs."
 ---
 
 Hi, I'm **Sebastian Poxhofer** – Tech Lead for **Developer Experience & Platform Engineering** at N26. I design, scale, and evolve internal platforms that let product teams ship faster and safer across **multi-cluster Kubernetes** and **hybrid (cloud + datacenter) environments** in regulated contexts (finance, government, insurance, healthcare).
+
+<div class="buttons" style="margin:12px 0 28px; display:flex; gap:12px; flex-wrap:nowrap; max-width:100%; overflow-x:auto;">
+  <a class="button" href="mailto:sebastian@poxhofer.at?subject=Platform%20Engineering%20Discovery%20Call&body=Context%3A%20(Current%20challenges%2C%20team%20size%2C%20Kubernetes%20footprint)%0ADesired%20Outcomes%3A%0ATimeline%3A" style="background:#2563eb; color:#fff;"><span class="button-inner">Book Discovery Call</span></a>
+  <a class="button" href="#evidence" style="background:#059669; color:#fff;"><span class="button-inner">See Proof of Expertise</span></a>
+  <a class="button" href="#engagement" style="background:#7c3aed; color:#fff;"><span class="button-inner">Engagement Models</span></a>
+</div>
 
 Over the past decade I've moved from the experimental chaos of homelabbing into building resilient, compliant, and developer-friendly platforms at scale. My work blends: Kubernetes architecture, IDP enablement (Backstage), supply chain & dependency governance (Renovate), observability (OpenTelemetry), and SRE/operational excellence practices.
 
@@ -57,7 +62,7 @@ I help organizations transform ad‑hoc infrastructure into a **productized inte
 
 ---
 
-### Engagement Models
+### Engagement Models {#engagement}
 
 - **Assessment & Strategy Sprint (2–4 weeks):** Maturity baseline, gap analysis, prioritized roadmap.
 - **Implementation Partnership:** Hands-on enablement delivering architectural foundations, automation, and golden paths.
@@ -78,7 +83,7 @@ I help organizations transform ad‑hoc infrastructure into a **productized inte
 - **Product Mindset:** Treating the platform as a product with discovery, feedback loops, measurable outcomes.
 - **Open Source Ethos:** Preference for transparent, extensible solutions over opaque vendor lock-in.
 
-### Selected Writing & Talks
+### Selected Writing & Talks {#evidence}
 
 Reinforcing practical expertise with public knowledge sharing and OSS contributions.
 
@@ -125,9 +130,10 @@ Reinforcing practical expertise with public knowledge sharing and OSS contributi
 
 Send a short note describing your current pain points or desired outcomes. I can quickly shape an engagement scope and a first actionable milestone.
 
-<div class="buttons" style="margin-top:8px; margin-bottom:24px;">
-  <a class="button" href="mailto:sebastian@poxhofer.at?subject=Platform%20Engineering%20Inquiry"><span class="button-inner">Book Intro (Email)</span></a>
-  <a class="button" href="https://www.linkedin.com/in/sebastian-poxhofer/" target="_blank" rel="noopener"><span class="button-inner">Connect on LinkedIn</span></a>
+<div class="buttons" style="margin-top:8px; margin-bottom:24px; display:flex; gap:12px; flex-wrap:nowrap; max-width:100%; overflow-x:auto;">
+  <a class="button" href="mailto:sebastian@poxhofer.at?subject=Platform%20Engineering%20Inquiry&body=Context%3A%20(Current%20challenges%2C%20team%20size%2C%20desired%20outcomes)%0APreferred%20Start%3A%0ATimezone%3A" style="background:#2563eb; color:#fff;"><span class="button-inner">Start Conversation</span></a>
+  <a class="button" href="mailto:sebastian@poxhofer.at?subject=Platform%20Assessment%20Request&body=Current%20State%20Summary%3A%0APain%20Points%3A%0APriority%20Areas%3A%0ATimeline%3A" style="background:#1d4ed8; color:#fff;"><span class="button-inner">Request Assessment</span></a>
+  <a class="button" href="https://www.linkedin.com/in/sebastian-poxhofer/" target="_blank" rel="noopener" style="background:#0a66c2; color:#fff;"><span class="button-inner">Connect on LinkedIn</span></a>
 </div>
 
 Let’s build a platform your engineers love—and your auditors trust.

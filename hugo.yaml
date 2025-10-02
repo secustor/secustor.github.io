@@ -34,6 +34,10 @@ markup:
   showTableOfContents:
     startLevel: 1
     endLevel: 3
+  goldmark:
+    renderer:
+      unsafe: true # allow raw HTML in markdown
+
 # https://gokarna-hugo.netlify.app/posts/theme-documentation-basics/#configuration
 params:
   # https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode

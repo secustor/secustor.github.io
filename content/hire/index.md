@@ -1,60 +1,135 @@
 ---
 title: "Hire Me"
-date: 2025-03-15T14:16:04+02:00
 hidemeta: true
 comments: false
+# You can optionally add a description for SEO; uncomment if desired
+description: "Platform Engineering & Kubernetes Consulting – Tech Lead DevEx (N26). Hybrid cloud & on‑prem enablement, IDP, GitOps, supply chain security, observability, SLOs."
 ---
 
-Hi, I'm Sebastian Poxhofer, a Lead Site Reliability Engineer at N26, a leading Fintech bank, where I focus on empowering engineering teams and ensuring the reliability and scalability of our platform. Outside of work, my hands are kept full of my wonderful wife, our energetic toddler, and our two feline overlords.
+Hi, I'm **Sebastian Poxhofer** – Tech Lead for **Developer Experience & Platform Engineering** at N26. I design, scale, and evolve internal platforms that let product teams ship faster and safer across **multi-cluster Kubernetes** and **hybrid (cloud + datacenter) environments** in regulated contexts (finance, government, insurance, healthcare).
 
-My tech journey started about 10 years ago with the rewarding chaos of homelabbing. This hands-on experience ignited a passion for building and understanding complex systems, which has fueled my career in Platform Engineering and SRE across diverse industries, including Fintech, E-Commerce, and Consulting.
+Over the past decade I've moved from the experimental chaos of homelabbing into building resilient, compliant, and developer-friendly platforms at scale. My work blends: Kubernetes architecture, IDP enablement (Backstage), supply chain & dependency governance (Renovate), observability (OpenTelemetry), and SRE/operational excellence practices.
 
-I bring over a decade of experience helping organizations like yours navigate the complexities of modern cloud-native environments, streamline development workflows, and achieve operational excellence. And when I'm not immersed in the world of infrastructure and code, you'll likely find me exploring the depths of the ocean through scuba diving or contributing to the vibrant open-source community – a passion that deeply aligns with my professional work.
+---
 
-### Scale Your Platform with Confidence: Expert SRE & Platform Engineering Consulting
+### My Value Proposition
 
-**Here's how I can help your organization:**
+I help organizations transform ad‑hoc infrastructure into a **productized internal platform** with clear interfaces, paved paths, and measurable developer outcomes. The result: shorter lead times, lower cognitive load, higher reliability, and sustainable security & compliance.
 
-My experience at N26 and supporting other scaling companies has equipped me with a deep understanding of the challenges involved in managing complex microservice architectures and large-scale platforms. I can provide expert guidance and implementation support in the following key areas:
+---
 
-- **Internal Developer Portal (IDP) Strategy & Implementation:** I have a proven track record of leading the development and adoption of Internal Developer Portals, like Backstage, to enhance developer experience, improve discoverability of services, and enforce best practices.
-- **Github Governance & Automation:** I can help you establish effective governance models for your Github organization, implement automation for repository management, and ensure security and compliance.
-- **Vulnerability Management & Patching:** I spearheaded the introduction of RenovateBot at N26, significantly reducing vulnerabilities and streamlining patch management processes. I can help you implement and optimize similar solutions for your organization.
-- **Backstage Adoption & Customization:** As an early adopter and advocate of Backstage, I can guide you through the entire lifecycle of adopting Backstage, from initial setup and plugin selection to custom plugin development tailored to your specific needs.
-- **Observability Strategy & Implementation:** I am a strong proponent of observability and can help you define and implement robust observability standards using tools like OpenTelemetry. This includes establishing best practices for logging, metrics, and tracing to gain deep insights into your system's behavior.
-- **Site Reliability Engineering (SRE) Best Practices:** I can help your teams adopt and implement core SRE principles and practices to improve system reliability, availability, and performance. This includes defining SLOs/SLAs, implementing error budgets, and fostering a culture of continuous improvement.
+### Core Focus Areas
 
-### Why Choose Me?
+- **Platform & DevEx Strategy:** Vision, north-star architecture, maturity assessment, org & ownership model, product mindset adoption.
+- **Kubernetes Platform Architecture:** Multi-cluster / multi-region design, GitOps (Argo CD / Flux), cluster lifecycle (Cluster API), upgrade & drift management, cost & capacity optimization.
+- **Hybrid Cloud & Datacenter Integration:** Secure connectivity, service discovery, workload placement strategy, gradual migration & coexistence patterns.
+- **Golden Paths & Internal Developer Portal (Backstage):** Software & infra templates, scorecards, tech docs, plugin design (including custom dependency intelligence via Renovate data).
+- **Supply Chain Security & Dependency Management:** Renovate program design, policy-as-code, SBOM integration, vulnerability triage workflows, automation guardrails.
+- **Observability & Operational Insight:** OpenTelemetry-first telemetry pipelines, metrics/traces/log unification, SLO frameworks, actionable dashboards vs vanity graphs.
+- **Governance & Compliance Enablement:** Policy enforcement (OPA/Gatekeeper/Kyverno), auditability, guardrails vs gates, separation of concerns, secure defaults.
+- **Reliability & SRE Practices:** SLO definition, error budgets, incident review loops, capacity planning, resilience testing.
+- **Developer Productivity Analytics:** Lead time, MTTR, onboarding time, dependency freshness, reliability indicators – turning metrics into platform backlog signals.
 
-Beyond my extensive professional experience, I bring a unique perspective and a proven track record of success across diverse organizational structures and regulatory landscapes:
+---
 
-- **RenovateBot Maintainer:** As an active maintainer of RenovateBot, I possess in-depth knowledge of its capabilities and can provide expert guidance on configuration, customization, and troubleshooting. My commitment to this project stems from my belief in the power of automation for managing the ever-growing complexity of software dependencies, a crucial aspect in any environment, especially regulated ones.
-- **OpenTelemetry Member:** My involvement in the OpenTelemetry community ensures I am up-to-date with the latest advancements in observability standards and best practices. Just like exploring the underwater world requires clear visibility, I believe robust observability is crucial for navigating complex systems, and even more so when compliance and auditability are paramount in regulated industries.
-- **Backstage Community Member:** I am an active member of the Backstage community and have experience building custom plugins, including those for extracting dependency data via Renovate, demonstrating my commitment to extending its functionality. This adaptability is key to tailoring solutions to the specific needs of various organizations, including those with strict compliance requirements.
-- **Practical Experience in Diverse Environments:** My experience spans across various industries, including fast-paced scale-ups like N26, and critically, **highly regulated environments such as German health insurance companies, government agencies, and banks.** This background has provided me with a deep understanding of the specific challenges and compliance requirements inherent in these sectors. I am adept at implementing solutions that meet stringent security, auditability, and regulatory standards.
-- **Passion for Open Source:** I believe in the power of open source and actively contribute to the communities surrounding the technologies I specialize in. This collaborative spirit is fundamental to how I approach problem-solving, ensuring solutions are robust, well-supported, and adaptable to evolving needs, including those driven by regulatory changes.
+### Selected Impact Themes
 
-This revised section now explicitly highlights your experience in regulated environments, making it a more compelling selling point for potential clients in those industries. Let me know if you have any other refinements in mind!
+- Reduced dependency patch cycle time & minimized critical vulnerability exposure windows through Renovate automation programs.
+- Accelerated service onboarding via curated templates & golden paths (infra + CI + telemetry baked in) surfaced through Backstage.
+- Lowered operational toil with GitOps-driven fleet management and standardized cluster baselines.
+- Improved release confidence & mean time to recovery through robust telemetry, SLO governance, and actionable runbooks.
+- De-risked regulated workloads by embedding compliance controls into platform layers instead of manual approval gates.
 
-### My Freelance Services
+---
 
-I offer a range of freelance services to help you effectively manage your dependencies, microservices, and observability practices:
+### What I Deliver
 
-- **Consulting:** Expert advice and strategic guidance on adopting and optimizing Renovate, OpenTelemetry, and Backstage within your organization.
-- **Implementation & Integration:** Hands-on support in setting up, configuring, and integrating these tools into your existing infrastructure and workflows.
-- **Custom Development:** Building custom Backstage plugins (like my dependency data extractor) or extending the functionality of Renovate to meet your specific requirements.
-- **Training & Workshops:** Educating your teams on best practices and effective usage of these technologies.
-- **Ongoing Support:** Providing continuous support and guidance to ensure the long-term success of your platform initiatives.
+| Category                    | Outcomes                                                                         |
+| --------------------------- | -------------------------------------------------------------------------------- |
+| Platform Vision & Roadmap   | Actionable maturity model, phased adoption plan, stakeholder alignment           |
+| Kubernetes Architecture     | High-availability & scalable multi-cluster design, lifecycle & upgrade playbooks |
+| Golden Paths (Backstage)    | Templates, software catalog curation, scorecards, plugin extensions              |
+| GitOps Enablement           | Repo structure, environment promotion strategy, drift detection, RBAC model      |
+| Supply Chain & Dependencies | Renovate policy architecture, vulnerability triage workflow, freshness reporting |
+| Observability & Telemetry   | OTel pipelines, SLOs, dashboards, alert strategy (noise reduction)               |
+| Governance & Policy         | Guardrail policies, compliance evidence automation, audit trail design           |
+| Reliability & Operations    | Incident review framework, resilience testing patterns, capacity models          |
 
-**Ready to Take Your Platform to the Next Level?**
+---
 
-If you're looking for an experienced and passionate SRE and Platform Engineering leader to help you manage your zoo of dependencies and microservices, improve your observability, and streamline your development processes, I'd love to hear from you.
+### Engagement Models
 
-**(Fun fact: You might find me headbanging to some metal while I'm writing code!)**
+- **Assessment & Strategy Sprint (2–4 weeks):** Maturity baseline, gap analysis, prioritized roadmap.
+- **Implementation Partnership:** Hands-on enablement delivering architectural foundations, automation, and golden paths.
+- **Targeted Deep Dives:** Focus on a single pillar (e.g., GitOps, Backstage adoption, supply chain security, OTel rollout).
+- **Custom Development:** Backstage plugins, Renovate data integrations, platform tooling extensions.
+- **Workshops & Training:** Kubernetes platform operations, SLO design, policy-as-code, IDP product mindset.
+- **Ongoing Advisory:** Fractional platform/DevEx leadership, roadmap refinement, metrics instrumentation.
 
-**Let's connect!**
+---
 
-- **Email:** [sebastian@poxhofer.at](mailto:sebastian@poxhofer.at)
-- **LinkedIn:** [https://www.linkedin.com/in/sebastian-poxhofer/](https://www.linkedin.com/in/sebastian-poxhofer/)
+### Why Work With Me?
 
-I look forward to discussing how I can help your organization achieve its platform goals.
+- **Tech Lead DevEx (N26):** Real-world experience scaling a platform in a fast-moving, regulated fintech context.
+- **Renovate Maintainer:** Deep knowledge of dependency automation & supply chain security levers.
+- **OpenTelemetry Contributor:** Up-to-date on emerging observability standards & implementation pitfalls.
+- **Backstage Community Member & Contributor:** Experience crafting plugins & integrating dependency intelligence into IDP workflows.
+- **Hybrid & Regulated Experience:** Delivered platforms spanning German health insurance, government, banking – embedding compliance without crushing velocity.
+- **Product Mindset:** Treating the platform as a product with discovery, feedback loops, measurable outcomes.
+- **Open Source Ethos:** Preference for transparent, extensible solutions over opaque vendor lock-in.
+
+### Selected Writing & Talks
+
+Reinforcing practical expertise with public knowledge sharing and OSS contributions.
+
+#### Blog Articles
+
+- [Renovate: Keep your OpenTelemetry Collector up to date!](/blog/renovate_managing_a_ocb_distribution/)
+- [Backstage: How to set up Renovate](/blog/backstage_renovate_config/)
+- [Renovate: My favorite features](/blog/renovate_my_favorite_features/)
+- [Renovate: No Datasource? No problem!](/blog/renovate_custom_datasources/)
+- [Renovate: Merge dependencies with confidence](/blog/renovate_prevent_merging_bugs/)
+- [Renovate: Could you please bump that version?](/blog/renovate_generic_version_bump/)
+- [K8s monitoring v2: Why are there no logs?](/blog/homelab_grafana_alloy_permissions/)
+
+#### Conference & Community Talks
+
+- [Extract dependency data on scale with Renovate](/talks/oss_2024_europe_extract_dependency_data_on_scale_with_renovate/)
+- [Building a developer portal the OpenSource way: An introduction to Backstage](/talks/backstage_building_a_idp_the_opensource_way/)
+- [Renovate: Let's upgrade your dependency workflow](/talks/renovate_lets_upgrade_your_dependency_workflow/)
+- [OpenTelemetry: from Frontend to Backend](/talks/opentelemetry_from_frontend_to_backend/)
+- [OpenTelemetry: How to debug user performance in your frontend](/talks/opentelemetry_how_to_debug_user_performance_in_your_frontend/)
+- [OpenTelemetry: OTEL and Kafka](/talks/opentelemetry_otel_and_kafka/)
+
+#### Open Source Contributions
+
+- Renovate core & ecosystem maintainer: [github.com/renovatebot/renovate](https://github.com/renovatebot/renovate)
+- Backstage plugin & platform integration work: [Backstage commits](https://github.com/backstage/backstage/commits?author=secustor)
+- OpenTelemetry contributions (instrumentation & adoption advocacy): [OpenTelemetry JS commits](https://github.com/open-telemetry/opentelemetry-js/commits?author=secustor)
+- Additional public work & tooling experiments: [GitHub Profile](https://github.com/secustor)
+
+---
+
+### Signals I Can Help You If…
+
+- Lead times are increasing and teams reinvent infra patterns repeatedly.
+- Kubernetes footprint grew organically; upgrades, policies, and cost feel fragile or ad‑hoc.
+- Backstage (or another IDP) adoption is stalling beyond initial enthusiasm.
+- Vulnerability backlog & dependency drift are outpacing remediation capacity.
+- Observability data exists but reliability decisions feel guessy.
+- Hybrid/on-prem + cloud integration is slowing modernization efforts.
+
+---
+
+### Getting Started
+
+Send a short note describing your current pain points or desired outcomes. I can quickly shape an engagement scope and a first actionable milestone.
+
+<div class="buttons" style="margin-top:8px; margin-bottom:24px;">
+  <a class="button" href="mailto:sebastian@poxhofer.at?subject=Platform%20Engineering%20Inquiry"><span class="button-inner">Book Intro (Email)</span></a>
+  <a class="button" href="https://www.linkedin.com/in/sebastian-poxhofer/" target="_blank" rel="noopener"><span class="button-inner">Connect on LinkedIn</span></a>
+</div>
+
+Let’s build a platform your engineers love—and your auditors trust.
+
+**(Fun fact: I might be headbanging to metal while refining your golden path templates.)**

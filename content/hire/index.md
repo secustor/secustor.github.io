@@ -66,6 +66,32 @@ I help organizations transform ad‑hoc infrastructure into a **productized inte
 - **Product Mindset:** Treating the platform as a product with discovery, feedback loops, measurable outcomes.
 - **Open Source Ethos:** Preference for transparent, extensible solutions over opaque vendor lock-in.
 
+### Selected Writing & Talks
+Reinforcing practical expertise with public knowledge sharing and OSS contributions.
+
+#### Blog Articles
+- [Renovate: Keep your OpenTelemetry Collector up to date!](/blog/renovate_managing_a_ocb_distribution/)
+- [Backstage: How to set up Renovate](/blog/backstage_renovate_config/)
+- [Renovate: My favorite features](/blog/renovate_my_favorite_features/)
+- [Renovate: No Datasource? No problem!](/blog/renovate_custom_datasources/)
+- [Renovate: Merge dependencies with confidence](/blog/renovate_prevent_merging_bugs/)
+- [Renovate: Could you please bump that version?](/blog/renovate_generic_version_bump/)
+- [K8s monitoring v2: Why are there no logs?](/blog/homelab_grafana_alloy_permissions/)
+
+#### Conference & Community Talks
+- [Extract dependency data on scale with Renovate](/talks/oss_2024_europe_extract_dependency_data_on_scale_with_renovate/)
+- [Building a developer portal the OpenSource way: An introduction to Backstage](/talks/backstage_building_a_idp_the_opensource_way/)
+- [Renovate: Let's upgrade your dependency workflow](/talks/renovate_lets_upgrade_your_dependency_workflow/)
+- [OpenTelemetry: from Frontend to Backend](/talks/opentelemetry_from_frontend_to_backend/)
+- [OpenTelemetry: How to debug user performance in your frontend](/talks/opentelemetry_how_to_debug_user_performance_in_your_frontend/)
+- [OpenTelemetry: OTEL and Kafka](/talks/opentelemetry_otel_and_kafka/)
+
+#### Open Source Contributions
+- Renovate core & ecosystem maintainer: [github.com/renovatebot/renovate](https://github.com/renovatebot/renovate)
+- Backstage plugin & platform integration work: [Backstage commits](https://github.com/backstage/backstage/commits?author=secustor)
+- OpenTelemetry contributions (instrumentation & adoption advocacy): [OpenTelemetry JS commits](https://github.com/open-telemetry/opentelemetry-js/commits?author=secustor)
+- Additional public work & tooling experiments: [GitHub Profile](https://github.com/secustor)
+
 ---
 ### Signals I Can Help You If…
 - Lead times are increasing and teams reinvent infra patterns repeatedly.

@@ -1,0 +1,23 @@
+name: Claude Autofix
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  review-renovate:
+    runs-on: ubuntu-latest
+    # only run this job if the PR is from the Renovate bot and any of the needed jobs failed
+    if: |
+      github.event.pull_request.user.login == 'renovate[bot]' &&
+      contains(needs.*.result, 'failure')
+    # The job which will trigger a fix attempt by Claude
+    needs:
+      - ci-pipeline
+    steps:
+      - uses: anthropics/claude-code-action@f6e7adf89ef0a0b369a2b7e69a78bbb7cdb0030c # v0.0.38
+        with:
+          direct_prompt: |
+            You are professional software engineer and DevOps expert. You will be given a pull request from Renovate, which has failed the CI pipeline.
+            Your task is to analyze the changes and fix the issues in the code.
+            Do not do any other changes, just fix the issues that caused the CI pipeline to fail.
+

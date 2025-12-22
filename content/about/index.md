@@ -7,10 +7,20 @@ comments: false
 
 Hey, I'm Sebastian!
 
-A software engineer and opensource enthusiast specializing in developing, monitoring and managing releases in distributed systems.
+I am a **Platform Engineer** and **Open Source Maintainer** specializing in **Developer Experience (DevEx)**, **Kubernetes**, and **Supply Chain Security**.
 
-Currently, I'm part of [N26](https://n26.com) and do freelance work on projects which I help to maintain.
-Some of the projects you maybe know are:
+Currently, I work as a Tech Lead at [N26](https://n26.com), helping teams ship faster and safer.
 
-- [Renovate](https://github.com/renovatebot/renovate)
-- [OpenTelemetry](https://github.com/open-telemetry)
+I also offer **consulting services** for organizations looking to improve their internal developer platforms, adopt **Renovate** at scale, or implement **OpenTelemetry**.
+
+[👉 Check out my services and how we can work together](/hire/)
+
+### Open Source
+
+I am an active maintainer and contributor to several CNCF and open source projects:
+
+- **[Renovate](https://github.com/renovatebot/renovate):** Core maintainer, focusing on dependency automation.
+- **[OpenTelemetry](https://github.com/open-telemetry):** Contributor to the JS ecosystem.
+- **[Backstage](https://backstage.io):** Plugin developer and community member.
+
+When I'm not coding or consulting, you can find me [speaking at conferences](/talks/) or blogging about my engineering adventures.

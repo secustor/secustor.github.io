@@ -25,7 +25,7 @@ then each chapter can be read independently.
 
 ## General recommendations
 
-Tough, this blog entry is mostly about ways to prevent merging buggy dependencies using [Renovate](https://github.com/renovatebot/renovate/).
+Though, this blog entry is mostly about ways to prevent merging buggy dependencies using [Renovate](https://github.com/renovatebot/renovate/).
 I want to start with general good practices around managing and finding dependencies before they are merged.
 
 ### Run tests on each PR
@@ -35,7 +35,7 @@ Sadly, having some of your own code is not enough.
 Based on the type of the dependency updated, different level of tests is needed.
 
 Unit tests are enough in case of software libraries,
-tough the unit test have
+though the unit test have
 to cover the used functionality of these libraries.
 Mocking the libraries in this case is counterproductive
 as we want to confirm that the libraries still return the results which are expected.
@@ -51,7 +51,7 @@ Most modern package managers come with lock file support such as NPM for Node.js
 ( `pdm.lock` ) this brings the benefit of reproducible builds and other benefits
 like checking hashes of your downloaded binary blobs against the expected ones.
 
-Tough to make use of this improvement, you should not run generic installation commands,
+Though to make use of this improvement, you should not run generic installation commands,
 as these are more frequent than not rewrite the lock files with new versions.
 The basis here is the same as running it on your local machine.
 Namely, the ranges defined in your package file.
@@ -76,7 +76,7 @@ or comparing hash values of your build artifacts while triggering the CI specifi
 ### Test integrations with libraries
 
 For typesafe languages such as Java, C# or Go it most often enough to simply build your program,
-tough this is not the case for dynamically typed systems.
+though this is not the case for dynamically typed systems.
 In other cases, like Python,
 you have to test the API of external packages to get the same level of confidence for merges.
 
@@ -86,7 +86,7 @@ If you do not know what Renovate is, I recommend reading this blog first:
 <https://www.augmentedmind.de/2023/07/30/renovate-bot-introduction/>
 
 Renovate has some features which give you additional confidence to merge external chances.
-Tough they cannot be a replacement for some fundamental testing as described above.
+Though they cannot be a replacement for some fundamental testing as described above.
 
 ### Minimum release age
 

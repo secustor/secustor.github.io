@@ -29,7 +29,7 @@ written by your own.
 For example, to implement a complex filter logic or support an internal API.
 
 Such a custom distro starts mostly simply,
-tough with time more and more modules will be added,
+though with time more and more modules will be added,
 and sooner than later you will have to invest some time to keep the builder config update to date.
 Here comes the new [`ocb`](https://docs.renovatebot.com/modules/manager/ocb/) manager for RenovateBot into play.
 If enabled,
@@ -109,7 +109,7 @@ with the `depTypes` provided by `ocb` such as `collector` and `extensions`.
 
 ## Can we automate that?
 
-With all these new PRs, we have still to bump the version before merging, tough this can be automated too.
+With all these new PRs, we have still to bump the version before merging, though this can be automated too.
 This is achieved using the [`bumpVersion`](https://docs.renovatebot.com/configuration-options/#bumpversion) option,
 which sets up Renovate to increase the `version` field with a semver level.
 

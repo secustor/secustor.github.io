@@ -34,7 +34,7 @@ But how does this work in practice? Let's go through this step by step.
 
 ## The basics
 
-If you are familiar with how RenovateBot works, you can skip this section, tough it can still hold some valuable information for experienced users.
+If you are familiar with how RenovateBot works, you can skip this section, though it can still hold some valuable information for experienced users.
 
 - A [`Manager`](https://docs.renovatebot.com/modules/manager/) defines the files which should be scanned and provide functionality to extract dependencies from these files
 - A [`Datasource`](https://docs.renovatebot.com/modules/datasource/) on the other hand defines how to find available versions of dependencies. Usually `datasources` query registries or APIs to retrieve the versions.
@@ -284,7 +284,7 @@ Which results in this JSON:
 
 Now to the more interesting part, mapping elements of the API result to a new array under `releases`.
 If we had to simply copy all objects, it would be easy.
-Simply copying it using `$` and we are done, tough we need to translate the field names too.
+Simply copying it using `$` and we are done, though we need to translate the field names too.
 
 Therefore,
 we have to use the [JSONata object constructor](https://docs.jsonata.org/construction#object-constructors),
@@ -336,7 +336,7 @@ This will pretty much look like what we want:
 Note that the enterprise versions do not have `sourceUrl` fields
 and because we are picking the first input object we are getting now the enterprise link for `homepage`.
 
-Tough because we do not use the enterprise version, we probably want to filter them out.
+Though because we do not use the enterprise version, we probably want to filter them out.
 This is what we are going to do in the next section.
 
 ### Let's skip these

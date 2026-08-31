@@ -34,7 +34,7 @@ The configuration is straightforward. You need to define a [`versionBumps`](http
 - `matchStrings`: An array of regexes which are matched against the file content. Each regex has to contain a `version` named regex group. If any version is matched, then a bump is attempted.
 - `bumpType`: The type of bump to perform. Can be `major`, `minor`, `patch` or `prerelease`.
 
-These fields are templates and therefore support Renovates [templating syntax](https://docs.renovatebot.com/templates/).
+These fields are templates and therefore support Renovate's [templating syntax](https://docs.renovatebot.com/templates/).
 
 ## A basic bumpVersion example
 

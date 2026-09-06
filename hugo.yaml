@@ -3,7 +3,7 @@ title: secustor
 theme: PaperMod
 
 defaultContentLanguage: "en"
-languageCode: en
+locale: en
 
 enableEmoji: true
 enableRobotsTXT: true

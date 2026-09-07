@@ -6,3 +6,6 @@ public
 
 # PNPM
 node_modules
+
+# Claude Code
+.claude/

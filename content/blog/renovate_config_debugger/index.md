@@ -233,7 +233,7 @@ This minor update WOULD be grouped as "all non-major dependencies".
 `rcd validate` exits with code 2 when Renovate would reject the config, which makes it a cheap CI check.
 `rcd compare before.json after.json --dep '...'` tells you whether an edit changed behaviour for a dependency, or only moved text around.
 
-All commands have a `--format json` option in case you want to process the output. 
+All commands have a `--format json` option in case you want to process the output.
 
 ## Let the agent ask
 

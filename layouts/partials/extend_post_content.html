@@ -1,0 +1,3 @@
+{{- if or (eq .Section "blog") (eq .Section "talks") }}
+  {{ partial "hire_cta.html" . }}
+{{- end }}

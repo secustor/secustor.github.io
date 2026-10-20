@@ -9,7 +9,7 @@ Hey, I'm Sebastian!
 
 I am a **Platform Engineer** and **Open Source Maintainer** specializing in **Developer Experience (DevEx)**, **Kubernetes**, and **Supply Chain Security**.
 
-Currently, I work as a Tech Lead at [N26](https://n26.com), helping teams ship faster and safer.
+Currently, I work as an Engineer in Developer Experience (DX) at [Stedi](https://www.stedi.com/), helping teams ship faster and safer. Previously, I was a Tech Lead at [N26](https://n26.com).
 
 I also offer **consulting services** for organizations looking to improve their internal developer platforms, adopt **Renovate** at scale, or implement **OpenTelemetry**.
 

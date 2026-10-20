@@ -2,10 +2,10 @@
 title: "Hire Me"
 hidemeta: true
 comments: false
-description: "Platform Engineering & Kubernetes Consulting – Tech Lead DevEx (N26). Hybrid cloud & on‑prem enablement, IDP, GitOps, supply chain security, observability, SLOs."
+description: "Platform Engineering & Kubernetes Consulting – Engineer in Developer Experience (Stedi), former Tech Lead DevEx (N26). Hybrid cloud & on‑prem enablement, IDP, GitOps, supply chain security, observability, SLOs."
 ---
 
-Hi, I'm **Sebastian Poxhofer** – Tech Lead for **Developer Experience & Platform Engineering** at N26. I design, scale, and evolve internal platforms that let product teams ship faster and safer across **multi-cluster Kubernetes** and **hybrid (cloud + datacenter) environments** in regulated contexts (finance, government, insurance, healthcare).
+Hi, I'm **Sebastian Poxhofer** – Engineer in **Developer Experience (DX)** at [Stedi](https://www.stedi.com/) and former Tech Lead for **Developer Experience & Platform Engineering** at N26. I design, scale, and evolve internal platforms that let product teams ship faster and safer across **multi-cluster Kubernetes** and **hybrid (cloud + datacenter) environments** in regulated contexts (finance, government, insurance, healthcare).
 
 <div class="buttons" style="margin:12px 0 28px; display:flex; gap:12px; flex-wrap:nowrap; max-width:100%; overflow-x:auto;">
   <a class="button" href="mailto:sebastian@poxhofer.at?subject=Platform%20Engineering%20Discovery%20Call&body=Context%3A%20(Current%20challenges%2C%20team%20size%2C%20Kubernetes%20footprint)%0ADesired%20Outcomes%3A%0ATimeline%3A" style="background:#2563eb; color:#fff;"><span class="button-inner">Book Discovery Call</span></a>
@@ -75,7 +75,7 @@ I help organizations transform ad‑hoc infrastructure into a **productized inte
 
 ### Why Work With Me?
 
-- **Tech Lead DevEx (N26):** Real-world experience scaling a platform in a fast-moving, regulated fintech context.
+- **DX Engineer (Stedi), former Tech Lead DevEx (N26):** Real-world experience scaling a platform in a fast-moving, regulated fintech context.
 - **Renovate Maintainer:** Deep knowledge of dependency automation & supply chain security levers.
 - **OpenTelemetry Contributor:** Up-to-date on emerging observability standards & implementation pitfalls.
 - **Backstage Community Member & Contributor:** Experience crafting plugins & integrating dependency intelligence into IDP workflows.

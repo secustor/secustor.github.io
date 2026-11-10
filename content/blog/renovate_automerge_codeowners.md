@@ -64,6 +64,7 @@ The carve-out applies to humans as well, so anybody can now change your workflow
 The cleaner approach is to keep CODEOWNERS as it is and give Renovate itself the right to skip the review.
 [Repository rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) support GitHub Apps as bypass actors.
 This is the app Renovate runs as, `renovate[bot]` for the hosted Mend app or your own app if you self-host.
+Both show up in the bypass list picker like any other installed app.
 
 A bypass applies to every rule in a ruleset.
 If you put the required status checks and the code owner review in the same ruleset, Renovate skips both.
@@ -76,7 +77,9 @@ The bypass mode decides which automerge type you can use.
 
 ### Branch automerge
 
-With bypass mode "Always allow", Renovate may push to the default branch.
+For direct pushes, the bypass mode has to be "Exempt".
+"Always allow" is not enough here.
+With "Exempt" the rules of the `review` ruleset are not evaluated for Renovate at all, and GitHub does not create a bypass entry in the audit log.
 Combine this with [`automergeType: "branch"`](https://docs.renovatebot.com/configuration-options/#automergetype):
 
 ```json title="renovate.json"
@@ -120,9 +123,6 @@ GitHub's native auto-merge waits for all requirements, so let Renovate merge the
 Renovate checks that the status checks of the branch are green before it merges.
 This also makes [`automergeSchedule`](https://docs.renovatebot.com/configuration-options/#automergeschedule) reliable, as native auto-merge is enabled at PR creation time and does not respect the schedule.
 
-I recommend trying both in a test repository of your organisation first.
-How GitHub handles bypass actors has changed a few times, and the merge box is the only reliable answer.
-
 ## The review moves into renovate.json
 
 With the bypass in place, the code owners do not review the dependency updates any more.
@@ -134,7 +134,7 @@ So treat the config with the same care:
 - **Keep the automerge rules narrow.** `matchUpdateTypes` and `matchDepTypes` are the first filter. I avoid automerging majors and runtime dependencies without good test coverage. My [previous blog](../renovate_prevent_merging_bugs) covers the testing side.
 - **Wait before merging.** [`minimumReleaseAge`](https://docs.renovatebot.com/configuration-options/#minimumreleaseage) gives the ecosystem time to find a compromised or broken release before it lands. `config:best-practices` sets 3 days for npm already.
 - **Do not set `ignoreTests`.** It is `false` by default, and the status checks are the only gate left.
-- **Mind the token when self-hosting.** The bypass belongs to the app, not to Renovate. Every workflow that can mint a token for that app can push to your default branch. Use a dedicated app for Renovate and do not reuse its credentials for other automation.
+- **Mind the token when self-hosting.** The bypass belongs to the app, not to Renovate. Every workflow that can mint a token for that app can push to your default branch, and with "Exempt" those pushes do not show up as bypasses in the audit log. Use a dedicated app for Renovate and do not reuse its credentials for other automation.
 
 Before merging a change to the automerge rules, check which updates it actually affects.
 The [Renovate Config Debugger](https://renovate.secustor.dev/) answers "would this update automerge?" for a given dependency, so a reviewer does not have to work through the presets in their head.

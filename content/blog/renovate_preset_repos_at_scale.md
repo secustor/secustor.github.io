@@ -180,7 +180,9 @@ So consumers have to use the absolute form, including the inherited tag:
 }
 ```
 
-If you are unsure about the exact string, run Renovate with `LOG_LEVEL=debug` and look at `visitedPresets` in the `Resolved shallow config, without merging internal presets` message.
+If you are unsure about the exact string, paste the consumer config into the [Renovate Config Debugger](https://renovate.secustor.dev/).
+Its preset tree lists every nested preset in the resolved form, including the inherited tag.
+Without it, run Renovate with `LOG_LEVEL=debug` and look at `visitedPresets` in the `Resolved shallow config, without merging internal presets` message.
 
 <!-- TODO(examples): note that this ignorePresets entry has to be bumped together with the tag; show how the renovate-config manager handles it, or recommend avoiding ignorePresets in favour of extending parts -->
 
@@ -196,7 +198,7 @@ npx --package renovate -- renovate-config-validator --strict default.json system
 <!-- TODO(examples): GitHub Actions workflow running the validator on every preset file -->
 
 The validator tells you whether a file is valid, not what it does once all presets are merged.
-For that I use my [Renovate Config Debugger](../renovate_config_debugger), which shows the full preset tree and which preset set which value.
+For that I use my [Renovate Config Debugger](https://renovate.secustor.dev/) ([introduction post](../renovate_config_debugger)), which shows the full preset tree and which preset set which value.
 Paste a consumer config pinned to a branch or tag of your preset repository and check the result before you tag a release.
 
 <!-- TODO(examples): screenshot of the preset tree of relative-presets-demo in the debugger -->
